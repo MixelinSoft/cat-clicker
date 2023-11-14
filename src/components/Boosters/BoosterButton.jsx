@@ -7,6 +7,7 @@ const BoosterButton = ({
   boosterCost,
   onChangeScores,
   scores,
+  type,
 }) => {
   const onClickBoosterHandler = () => {
     if (scores >= boosterCost) {
@@ -15,14 +16,17 @@ const BoosterButton = ({
     }
   };
 
+  const boosterTitle =
+    type === 'autoClick'
+      ? `Click here to activate +${boosterRatio}scores per seconds`
+      : `Click here to activate +${boosterRatio}scores per click`;
+
   return (
     <UICard
       className={`${styles.boosterContainer} ${
         scores >= boosterCost ? '' : styles.inActive
       }`}>
-      <button onClick={onClickBoosterHandler}>
-        Click here to activate +{boosterRatio} on click
-      </button>
+      <button onClick={onClickBoosterHandler}>{boosterTitle}</button>
       <p>{boosterName}</p>
       <p>Cost: {boosterCost}</p>
     </UICard>
