@@ -1,0 +1,14 @@
+.boosterContainer {
+  background-color: rgb(66, 0, 173);
+  width: 150px;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.boosterContainer button {
+  border-radius: 25px;
+}
+
+.inActive {
+  background-color: #5b5b5b;
+}

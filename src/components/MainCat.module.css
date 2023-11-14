@@ -1,0 +1,12 @@
+.mainCatContainer {
+  width: 100%;
+}
+
+.mainCat__button {
+  display: block;
+  margin: 100px auto 0 auto;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(246, 147, 147);
+  border-radius: 50px;
+}
